@@ -12,9 +12,9 @@
   "all_four_pages_visually_inspected": true,
   "cloud_text_matches_local_after_line_ending_normalization": true,
   "cloud_figures_exact_match": true,
-  "pdf_sha256": "49e992fd9c6fc2099d4c443b38e15a74d710af326777447a346e7874640c7f07",
+  "pdf_sha256": "db62c9b3e29aa4dc82d780e81169ae8f761c39d4f1c33108d59340eb7c04ceec",
   "organizer_form_submitted": false,
-  "record_scope": "Overleaf compilation and local verification of the authorized two-author/contact update; publication receipt is recorded separately after the commit.",
+  "record_scope": "Overleaf compilation and local verification of the authorized Jinhao Liu email addition; publication receipt recorded separately after commit.",
   "report_publication_authorized": true,
   "previous_publication": {
     "published_commit": "6d8b0be5f548fc7d198925fb5c33dd0e503b7986",
@@ -28,7 +28,7 @@
   ],
   "affiliation": "Nankai University, Tianjin, China",
   "contact_email": "lipeilin307@gmail.com",
-  "second_author_email": null,
-  "verified_at": "2026-11-14T12:51:32.270712+08:00",
-  "content_change": "Author metadata only; report scientific content, template, figures and bibliography unchanged."
+  "second_author_email": "1916742086@qq.com",
+  "verified_at": "2026-11-14T13:24:05.789749+08:00",
+  "content_change": "Added Jinhao Liu email only; scientific content, template, figures and bibliography unchanged."
 }

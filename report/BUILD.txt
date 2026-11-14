@@ -5,4 +5,4 @@ report.pdf is the actual four-page PDF downloaded after successful compilation i
 The official preamble and fixed abstract opening, introduction and acknowledgment text were preserved. Guide mode is disabled. Compile main.tex with the official template's configuration and BibTeX/ACM-Reference-Format.
 The editor project is private to its authorized users; the full source and PDF are provided here for public access without an Overleaf invitation.
 
-Author/contact update on 2026-11-14: Peilin Li and Jinhao Liu, both Nankai University, China. Contact: lipeilin307@gmail.com. Jinhao Liu email not supplied and therefore omitted. Recompiled in Overleaf with 0 errors; 4 pages visually checked.
+Author/contact update on 2026-11-14: Peilin Li and Jinhao Liu, both Nankai University, China. Contacts: lipeilin307@gmail.com (Peilin Li); 1916742086@qq.com (Jinhao Liu). Recompiled in Overleaf with 0 errors; 4 pages visually checked.
