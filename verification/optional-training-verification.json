@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "training_executed": false,
+  "optimizer_updates": 0,
+  "model_constructions": 0,
+  "cuda_initialized": false,
+  "default_training_gate_passed": true,
+  "imported_modules": [
+    "__init__.py",
+    "base_pipeline.py",
+    "calibration.py",
+    "data.py",
+    "detector_crops.py",
+    "detector_pipeline.py",
+    "losses.py"
+  ],
+  "nested_date_hash_routes_checked": true,
+  "base_jobs": 7,
+  "refiner_jobs": 4,
+  "official_inputs": {
+    "passed": true,
+    "training_executed": false,
+    "optimizer_updates": 0,
+    "physical_images": 707,
+    "expert_sets": 1154,
+    "annotation_sha256": "5da9e92b5a1a1947fd5d57adb6688269625c48ec1ef884daf2a01618c9ed54a1",
+    "nested_routes_checked": true
+  },
+  "actual_base_pool_sizes": {
+    "outer-0": 473,
+    "outer-1": 474,
+    "outer-2": 467,
+    "single-0": 234,
+    "single-1": 233,
+    "single-2": 240,
+    "deployment": 707
+  },
+  "deterministic_training_crops": true,
+  "detector_expert_counts": {
+    "train": 725,
+    "val": 94
+  },
+  "grayscale_mask_spine_data_builder_checked": true,
+  "checked_source_hashes": {
+    "sfseg/train.py": "d295d5a800f43e3fc13c6da88c4131d3ba43c95c95b335d5e8d153a38d6bc9fe",
+    "verify_optional_training.py": "5185764bed4609f8b39b50fd8fd03d5002402f083b6c6eaa6d3099b74b431ef0",
+    "reproduce.ipynb": "eda1c384a1189f197b493b55c96debd65bdbf69fab96bb2b34895eb418e7955c",
+    "sfseg/training/__init__.py": "c44edc8bd8be8cee3f0dce485af29362e857383f5502621a8fa5082793d32248",
+    "sfseg/training/base_pipeline.py": "5337595733fa8303c711ba900fb1e2213078c7d9487d70c983ff20f7c561e276",
+    "sfseg/training/calibration.py": "3d5118062063bc585acbf509a9cf6bfe4cc203dc07b38591060f2223e7c595f9",
+    "sfseg/training/data.py": "41d5fdebc150c6767edf209ddbcb73f9966dfd94cb8e93e3dd5fdd3fe311ce5b",
+    "sfseg/training/detector_crops.py": "7c5416c3ac387a8df42a904803fc6876019c50de1f3fa3b1bae261a0cbf10200",
+    "sfseg/training/detector_pipeline.py": "186828177855cb9f8a4a029119895aa1e9291e3dfbc44c2cff10873c08721a8f",
+    "sfseg/training/losses.py": "e164c7fac8f2a8a76d3fdefc590ec421decb94888adf66f9473322acdd790705",
+    "configs/training-recipe.json": "affb0c6d0ca57a3a170ce302e1368f2cfed21124ad8e45149469d1add35d578b",
+    "configs/detector-training.json": "d92c74fdaaf564147008e6aeea77096301b608fb29485bd49086d8e6d1d98a91",
+    "configs/training-initialization.json": "38412583139b5e5d2c5fd89d975750933481978f23a9c50473ecc7baa914b15a"
+  }
+}

@@ -6,6 +6,6 @@ The pinned biconcavelens community source snapshot has no LICENSE file. A new ch
 
 Ultralytics and the other installed libraries retain their own license terms, recorded in dependency-licenses.json. No third-party license is replaced by this repository's notices. This file is a factual status record, not legal clearance.
 
-The numerical reproduction record uses the pinned Windows/CUDA environment. Installation in a completely clean environment and portability to other hardware remain separate from CSV parity. Public Git/LFS download checks are recorded separately when completed.
+The numerical reproduction record uses the pinned Windows/CUDA environment. A fresh virtual environment with no system-site packages was installed and the complete Notebook reproduced all 180 images byte-for-byte on 2026-11-14. This is not a fresh-OS or different-hardware portability test. The optional training entry is implemented and checked without running training. Public Git/LFS download checks are recorded separately when completed.
 
 The organizer's final submission form is not submitted by publishing this repository.

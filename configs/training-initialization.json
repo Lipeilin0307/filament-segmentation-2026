@@ -1,0 +1,20 @@
+{
+  "base": {
+    "url": "https://huggingface.co/timm/convnext_base.fb_in1k/resolve/28a94f6353acecb8a5ce70491f9bc29a21d93e2e/model.safetensors",
+    "sha256": "0d397521d5943d55f8fda5d98560b70e9d8e6a4b68c26bdaf806669961123487",
+    "bytes": 354400320,
+    "relative_path": "pretrained/base/model.safetensors"
+  },
+  "resnet34": {
+    "url": "https://download.pytorch.org/models/resnet34-333f7ec4.pth",
+    "sha256": "333f7ec4c6338da2cbed37f1fc0445f9624f1355633fa1d7eab79a91084c6cef",
+    "bytes": 87306240,
+    "relative_path": "pretrained/resnet34-333f7ec4.pth"
+  },
+  "yolo": {
+    "url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo11m-seg.pt",
+    "sha256": "eb9a06f63e2206c35d68d839b08c362429ebecf933ad54c1ad68b2fd001c17cf",
+    "bytes": 45400152,
+    "relative_path": "pretrained/yolo11m-seg.pt"
+  }
+}

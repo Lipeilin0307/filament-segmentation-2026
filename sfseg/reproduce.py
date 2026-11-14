@@ -52,19 +52,22 @@ def rles(labels):
             for i, cid in enumerate([int(x) for x in np.unique(labels) if x > 0], 1)]
 
 
-def verify_models():
-    manifest = read(ROOT/'models/manifest.json')
+def verify_models(model_dir=None):
+    model_dir = ROOT/'models' if model_dir is None else Path(model_dir).resolve()
+    manifest = read(model_dir/'manifest.json')
+    assert set(manifest) == {'base.pt','refiner.pt','histgbdt.pkl','yolo11m.pt','gray_refiner.pt'}
     for name, row in manifest.items():
-        if sha(ROOT/'models'/name) != row['sha256']: raise ValueError('Weight hash mismatch: '+name)
+        if sha(model_dir/name) != row['sha256']: raise ValueError('Weight hash mismatch: '+name)
     return manifest
 
 
-def run(test_dir, output_dir, limit=None):
+def run(test_dir, output_dir, limit=None, *, model_dir=None):
     test_dir, output_dir = Path(test_dir).resolve(), Path(output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
     target = output_dir/'submission.csv'
     if target.exists(): raise FileExistsError('Use a new output directory; existing output is never silently reused.')
-    weights = verify_models()
+    model_dir = ROOT/'models' if model_dir is None else Path(model_dir).resolve()
+    weights = verify_models(model_dir)
     rows = read(ROOT/'configs/test-images.json')
     if limit is not None: rows=rows[:limit]
     for row in rows:
@@ -76,15 +79,15 @@ def run(test_dir, output_dir, limit=None):
     torch.backends.cuda.matmul.allow_tf32=False
     started=time.monotonic()
     base=StrongUnet('base_pretrained').cuda().eval()
-    ck=torch.load(ROOT/'models/base.pt',map_location='cpu',weights_only=False)
+    ck=torch.load(model_dir/'base.pt',map_location='cpu',weights_only=False)
     assert ck['weights']=='EMA' and ck['step']==9216
     base.load_state_dict(ck['model']); del ck
     refiner=Refiner().cuda().eval()
-    refiner.load_state_dict(torch.load(ROOT/'models/refiner.pt',map_location='cpu',weights_only=False)['model'])
+    refiner.load_state_dict(torch.load(model_dir/'refiner.pt',map_location='cpu',weights_only=False)['model'])
     # Pickle is accepted only after verifying the supplied trusted SHA256.
-    state=pickle.loads((ROOT/'models/histgbdt.pkl').read_bytes())
-    detector=YOLO(str(ROOT/'models/yolo11m.pt'))
-    ck=torch.load(ROOT/'models/gray_refiner.pt',map_location='cpu',weights_only=False)
+    state=pickle.loads((model_dir/'histgbdt.pkl').read_bytes())
+    detector=YOLO(str(model_dir/'yolo11m.pt'))
+    ck=torch.load(model_dir/'gray_refiner.pt',map_location='cpu',weights_only=False)
     gray=PretrainedRefiner(ck['encoder'],ck.get('in_channels',1),ck.get('out_channels',1),False).cuda().eval()
     gray.load_state_dict(ck['model']); gray.crop_size=ck.get('crop_size',256); del ck
     config=read(ROOT/'configs/inference.json')

@@ -6,8 +6,9 @@ This repository reproduces `submission_Base_Full707_HistGBDT_YOLO_Conditional_A_
 
 ## Contents
 
-- `reproduce.ipynb`: complete image-to-CSV pipeline and post-inference verification.
-- `sfseg/`: minimal inference code (no imports from the original project).
+- `reproduce.ipynb`: optional training (disabled by default), complete image-to-CSV inference and post-inference verification.
+- `TRAINING.md`: optional training commands, fixed data routes/budgets and validation limits.
+- `sfseg/`: self-contained inference and optional training code (no imports from the original project).
 - `models/`: all five runtime weights, totaling about 494 MiB, plus SHA256 manifest.
 - `configs/`: frozen source/conditional calibration, official test image hashes and training recipe.
 - `verification/`: reference CSV, numerical evidence, source provenance and environment lock. The reference CSV is **never an inference input**.
@@ -27,7 +28,7 @@ python -m pip install -r requirements.txt
 python -m ipykernel install --user --name filament-final --display-name "Filament final"
 ```
 
-Open `reproduce.ipynb` from this repository in a Jupyter-compatible editor and select that kernel. Set `SFSEG_TEST_DIR` to the folder containing the official 180 test images, or edit `TEST_DIR` in its first code cell. Run all cells. No training annotations, probability caches, or additional model downloads are required. Test data are not redistributed here; obtain the competition-provided images through the normal competition access process.
+Open `reproduce.ipynb` from this repository in a Jupyter-compatible editor and select that kernel. Set `SFSEG_TEST_DIR` to the folder containing the official 180 test images, or edit `TEST_DIR` in its first code cell. Leave `RUN_TRAINING = False` and run all cells. No training annotations, probability caches, or additional model downloads are required for this default path. Test data are not redistributed here; obtain the competition-provided images through the normal competition access process.
 
 Equivalent command-line reproduction:
 
@@ -49,9 +50,13 @@ The verifier checks exact per-image instance order/RLE, decode/re-encode, nonemp
 
 ## Local verification completed
 
-Both the standalone CLI and `reproduce.executed.ipynb` regenerated all 180 images from scratch and produced the exact target CSV bytes. CLI inference took **314.6 s**; Notebook inference took **672.3 s** in this local session. Both recorded **2.20 GiB peak PyTorch allocated memory**, which excludes driver allocations, caching and other applications. Runtime is environment-dependent.
+The updated `reproduce.executed.ipynb` was executed in a **new isolated Python virtual environment**, installed from `requirements.txt` without system site packages. `pip check` passed. All 6 code cells completed, the optional training branch stayed disabled, and fresh inference on all **180 images** produced **1,261 instances** with the exact target CSV bytes. Per-instance RLE, nonempty masks, nonoverlap and SHA256 all passed.
 
-The executed Notebook retains all five executed code cells, their outputs, and a prediction visualization. Reproduction records are stored under `verification/`. Run `python verify_local_package.py` for a CPU-only package integrity check. Validation used the existing pinned inference libraries plus isolated Notebook tooling; a clean internet-based dependency installation is not yet tested. A separate anonymous clone and complete Git LFS download passed on 2026-11-14, with all five model hashes and the exact reference CSV verified; see `verification/public-download-verification.json`.
+This clean-environment inference took **285.9 s** and recorded **2.20 GiB peak PyTorch allocated memory**, excluding driver allocations, caching and other applications. Runtime is environment-dependent. The earlier standalone CLI reproduction also passed (314.6 s); its historical record is retained. A clean virtual environment on the same Windows/GPU host is not a fresh-OS or different-hardware portability test.
+
+`verification/clean-environment-verification.json` contains the package versions, isolated-environment checks, full inference manifest and CSV comparison. `verification/optional-training-verification.json` records successful import/routing/real-data-builder checks with **zero model constructions and zero optimizer updates**. The actual training/optimizer path has not been executed in this release validation; see [TRAINING.md](TRAINING.md).
+
+Run `python verify_local_package.py` for CPU-only package integrity checks. The executed Notebook retains its outputs and a prediction visualization. A separate anonymous clone and complete Git LFS download previously passed on 2026-11-14; see `verification/public-download-verification.json`.
 
 ## Model and evaluation scope
 
@@ -75,7 +80,7 @@ The five model files total about 494 MiB. Downloading a source ZIP alone may not
 
 ## Attribution and release scope
 
-This release contains inference code, model weights, configuration, dependency pins, a complete Notebook, numerical verification records, and the [four-page technical report](report/report.pdf) with its LaTeX source and figures. The report was compiled successfully in the official Overleaf template and authorized for publication on 2026-11-14. Publishing these materials does not submit the organizer's final Google form.
+This release contains inference and optional training code, model weights, configuration, dependency pins, a complete Notebook, numerical verification records, and the [four-page technical report](report/report.pdf) with its LaTeX source and figures. The report was compiled successfully in the official Overleaf template and authorized for publication on 2026-11-14. Publishing these materials does not submit the organizer's final Google form.
 
 The community-derived detector/refiner routines are explicitly attributed in `licenses/THIRD-PARTY-NOTICES.txt` and `verification/source-provenance.json`. No upstream LICENSE was found in that pinned source or the upstream repository when checked on 2026-11-14. This repository does not claim that those portions have an open-source redistribution license, and does not grant a blanket MIT or other license over third-party material. See `licenses/PUBLICATION-REVIEW.txt` for unresolved licensing matters and dependency notices. Public availability is not a statement that all downstream uses are licensed.
 
@@ -83,4 +88,4 @@ The original incumbent files outside this package remain unchanged. No test labe
 
 ## Final-submission readiness (2026-11-14)
 
-The four-page Overleaf report and its source are published and have passed anonymous download/hash verification. The image-to-CSV pipeline is fully reproduced. Final submission is **not yet complete**: the [organizer's Nov 6 clarification](https://www.kaggle.com/competitions/filament-segmentation-2026/discussion/755907) additionally requests an optional training path in the demo Notebook, which is not yet packaged here. A clean dependency installation, third-party source redistribution permission, and the organizer form remain separate outstanding items. See `verification/final-submission-readiness.json` for the audited status. No competition form has been submitted.
+The four-page Overleaf report and its source are published and have passed anonymous download/hash verification. The updated Notebook now includes the [organizer-requested optional training entry](https://www.kaggle.com/competitions/filament-segmentation-2026/discussion/755907), defaulting to the supplied weights. Clean dependency installation and complete 180-image Notebook reproduction have passed. Actual retraining was intentionally not performed. Third-party source redistribution permission, final Kaggle selection and the organizer form remain separate outstanding items; see `verification/final-submission-readiness.json`. No competition form has been filled or submitted.

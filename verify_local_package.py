@@ -20,8 +20,8 @@ def main():
     for name,row in models.items(): assert sha(ROOT/'models'/name)==row['sha256'],name
     ref=read(ROOT/'verification/reference.json')
     assert sha(ROOT/'verification/reference-submission.csv')==ref['submission_sha256']
-    for path in (ROOT/'sfseg').glob('*.py'):
-        tree=ast.parse(path.read_text())
+    for path in (ROOT/'sfseg').rglob('*.py'):
+        tree=ast.parse(path.read_text('utf-8'))
         for n in ast.walk(tree):
             if isinstance(n,ast.ImportFrom):assert (n.module or '').split('.')[0] not in ('scripts','filament')
     for name in ('cli-verification.json','notebook-verification.json'):
@@ -34,6 +34,12 @@ def main():
     assert all(c.get('execution_count') is not None for c in cells)
     assert not any(o['output_type']=='error' for c in cells for o in c.get('outputs',[]))
     assert [c['source'] for c in read(ROOT/'reproduce.ipynb')['cells']]==[c['source'] for c in nb['cells']]
+    training=read(ROOT/'verification/optional-training-verification.json')
+    assert training['passed'] and training['optimizer_updates']==0 and not training['training_executed']
+    clean=read(ROOT/'verification/clean-environment-verification.json')
+    assert clean['passed'] and clean['isolated_venv'] and not clean['include_system_site_packages']
+    assert clean['verification']['submission_sha256']==ref['submission_sha256']
+    assert clean['verification']['byte_identical_to_reference'] and clean['optimizer_updates']==0
     print(json.dumps({'passed':True,'models':len(models),'executed_code_cells':len(cells),
                       'submission_sha256':ref['submission_sha256'],'network_operations_performed':False},indent=2))
 

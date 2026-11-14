@@ -1,10 +1,12 @@
 Third-party provenance
 ======================
-sfseg/supplement.py includes selected inference definitions from:
+sfseg/supplement.py and sfseg/training/detector_crops.py /
+detector_pipeline.py include selected inference and training definitions from:
 https://github.com/biconcavelens/filament-segmentation-2026
 commit 84c9c7ca05231490e68c6ca31659c42cb8b7a10e
 Files: train_refiner.py, crop_dataset.py, predict_refined.py, sweep_ensemble_4way.py.
-Definitions and original file SHA256 are listed in verification/source-provenance.json.
+Definitions and original file SHA256 are listed in verification/source-provenance.json
+and verification/training-source-provenance.json.
 The detector/refiner weights were trained locally on the stated official-data split;
 they are not community-trained weights downloaded from that repository.
 

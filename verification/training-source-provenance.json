@@ -1,0 +1,188 @@
+[
+  {
+    "source": "filament/masks.py",
+    "source_sha256": "b25ab312675c796fb0fae1c209354964eb895ef0f4ed3a7af836b1c9607e6c24",
+    "definitions": [
+      "annotation_mask"
+    ]
+  },
+  {
+    "source": "filament/data.py",
+    "source_sha256": "3490a108a14be22189e2bb3731059475305b82ba4716df92d396a93c43ccec90",
+    "definitions": [
+      "sha256",
+      "write_json",
+      "load_dataset",
+      "image_path"
+    ]
+  },
+  {
+    "source": "filament/learning_data.py",
+    "source_sha256": "793cbd830760f75066841d4d02bde15225e742c193e7e8ae18349604a31feaf2",
+    "definitions": [
+      "crop_instances",
+      "TrainingCrops",
+      "collate"
+    ]
+  },
+  {
+    "source": "filament/shape_losses.py",
+    "source_sha256": "50a7c812323d656dc1eee3f79bfb6a3d320df180de4903dd2920e965e96b5d50",
+    "definitions": [
+      "erode_cross",
+      "skeleton",
+      "contour_dice_loss",
+      "soft_cldice_loss",
+      "foreground_loss"
+    ]
+  },
+  {
+    "source": "filament/learning_models.py",
+    "source_sha256": "ea05415e975c9ee1b90a214d1296831b6acbaf7f61844c660c0ee87b98f9c6d8",
+    "definitions": [
+      "training_loss"
+    ]
+  },
+  {
+    "source": "scripts/local_refine.py",
+    "source_sha256": "a2c63c53292f8294d402d7c33b51b6066cde5f167cdf176fc5c5f0b99a49c1c1",
+    "definitions": [
+      "expert_loss"
+    ]
+  },
+  {
+    "source": "scripts/strong_baseline_model.py",
+    "source_sha256": "a48e5f93be0e1865dbb26e369541438441f440a41d520371df26c900db242ce3",
+    "definitions": [
+      "grayscale_stem",
+      "initialize",
+      "make_ema",
+      "update_ema"
+    ]
+  },
+  {
+    "source": "scripts/train_grayscale.py",
+    "source_sha256": "1a494f2ed9a9906f51c97cf532ec0b05584a39df64326d0f876e84bc7e385bac",
+    "definitions": [
+      "setup",
+      "save_checkpoint"
+    ]
+  },
+  {
+    "source": "scripts/strong_baseline_experiment.py",
+    "source_sha256": "34146189bb249bdf2a72c0dab3fb3be87a0a99e2531e97718298e8a8caf0a156",
+    "definitions": [
+      "batches",
+      "rng_state",
+      "restore_rng"
+    ]
+  },
+  {
+    "source": "scripts/base_adaptation_common.py",
+    "source_sha256": "271cd00ee6c56d61150639b8b40a15cb8adb7f9105224f7197c448d25a94086e",
+    "definitions": [
+      "probability_source"
+    ]
+  },
+  {
+    "source": "scripts/refined_quality_experiment.py",
+    "source_sha256": "fb112100ec79c21cbf6b51d27374cffd55903323ab1e10c1fa9d7de104c8097d",
+    "definitions": [
+      "truths_for",
+      "proposal_target",
+      "save_proposals"
+    ]
+  },
+  {
+    "source": "scripts/base_adaptation_backbones.py",
+    "source_sha256": "d5c98989ebb9ea4a6926eabfdd08df8477bb5df9f757d64fbdea7588358a3f34",
+    "definitions": [
+      "training_dataset",
+      "train_base",
+      "generate_probabilities"
+    ]
+  },
+  {
+    "source": "scripts/base_adaptation_refiner.py",
+    "source_sha256": "b338d951474b4934e8f7683f3c37f7cad4603ca0df9a382875366d79d2289cfc",
+    "definitions": [
+      "load_probability",
+      "build_data",
+      "train_refiner"
+    ]
+  },
+  {
+    "source": "scripts/base_adaptation_quality.py",
+    "source_sha256": "6c90559ae3e18cdf6deee13371d17fef8106959bc1282006f2fb0641227a3eb1",
+    "definitions": [
+      "build_quality_data"
+    ]
+  },
+  {
+    "source": "artifacts/bicon040-independent-v1/upstream/filament-segmentation-2026-84c9c7ca05231490e68c6ca31659c42cb8b7a10e/crop_dataset.py",
+    "source_sha256": "f454f2b6bb0834d2240c8e6fd962673da4d402a5cee278f65b8b14177cf95bc6",
+    "definitions": [
+      "truncate_mask",
+      "box_fill",
+      "build_spine_crop_cache",
+      "SpineCropDataset"
+    ]
+  },
+  {
+    "source": "scripts/bicon040_reproduce.py",
+    "source_sha256": "699066510426e0dd86d2835e483792d24371c7d9874ff0999044dec64d35a91f",
+    "definitions": [
+      "read",
+      "sha",
+      "write",
+      "now",
+      "status",
+      "set_seed",
+      "gray_refiner",
+      "state_rng",
+      "restore_rng",
+      "save_torch",
+      "entries_for",
+      "build_yolo_data",
+      "ultra_args",
+      "train_torch"
+    ]
+  },
+  {
+    "source": "artifacts/bicon040-independent-v1/upstream/filament-segmentation-2026-84c9c7ca05231490e68c6ca31659c42cb8b7a10e/train_refiner.py",
+    "source_sha256": "944675cdb210c76be57c07b2ce158c5a935adf3a8fca6e6b3a8f45db464fcdc9",
+    "definitions": [
+      "DiceBCELoss",
+      "MaskSpineLoss",
+      "evaluate"
+    ]
+  },
+  {
+    "adaptations": [
+      "Base initialization path rebound to isolated initialization directory.",
+      "Dataset and output roots supplied by CLI; no original project imports or paths.",
+      "Only retained recipe components are exposed; unused historical alternatives are not scheduled."
+    ],
+    "training_executed_during_packaging": false
+  },
+  {
+    "source": "scripts/review_bicon040_reference.py",
+    "sha256": "33cdd0be3ad77302ea325d0e72f37d1741fef90738f3f1eb19fa7854b0781d28",
+    "definitions": [
+      "pava"
+    ]
+  },
+  {
+    "source": "scripts/full707_yolo_oof_cpu.py",
+    "sha256": "5ebe43e280c876be16e4c6a0efa25b4d52b3eab16e11dcb19ceb5f532d7ad2f3",
+    "definitions": [
+      "fit_map"
+    ]
+  },
+  {
+    "adaptations": [
+      "Unexposed historical Mask R-CNN training branch removed from the public R34-only runner.",
+      "Retained source and conditional calibration maps remain frozen when optionally retraining weights; isotonic fitting primitive included for provenance."
+    ]
+  }
+]
