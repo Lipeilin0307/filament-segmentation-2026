@@ -35,6 +35,6 @@ def main():
     assert not any(o['output_type']=='error' for c in cells for o in c.get('outputs',[]))
     assert [c['source'] for c in read(ROOT/'reproduce.ipynb')['cells']]==[c['source'] for c in nb['cells']]
     print(json.dumps({'passed':True,'models':len(models),'executed_code_cells':len(cells),
-                      'submission_sha256':ref['submission_sha256'],'publication_performed':False},indent=2))
+                      'submission_sha256':ref['submission_sha256'],'network_operations_performed':False},indent=2))
 
 if __name__=='__main__':main()
