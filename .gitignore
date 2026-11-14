@@ -10,8 +10,3 @@ report/*.blg
 report/*.aux
 report/*.bbl
 
-# Report withheld by author; never publish it from this tree.
-report/
-*.pdf
-*.tex
-*.bib

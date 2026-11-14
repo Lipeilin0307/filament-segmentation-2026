@@ -1,0 +1,6 @@
+Official competition template: https://www.overleaf.com/project/6a735222766a5d9bbc55c686
+Editable author project: https://www.overleaf.com/project/6af7dba8e99d9136bacbbd45
+
+report.pdf is the actual four-page PDF downloaded after successful compilation in Overleaf on 2026-11-14 (0 errors). It is not a locally substituted build.
+The official preamble and fixed abstract opening, introduction and acknowledgment text were preserved. Guide mode is disabled. Compile main.tex with the official template's configuration and BibTeX/ACM-Reference-Format.
+The editor project is private to its authorized users; the full source and PDF are provided here for public access without an Overleaf invitation.

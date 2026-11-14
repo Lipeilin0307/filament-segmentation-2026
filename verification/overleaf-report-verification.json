@@ -1,0 +1,20 @@
+{
+  "project_url": "https://www.overleaf.com/project/6af7dba8e99d9136bacbbd45",
+  "official_template_url": "https://www.overleaf.com/project/6a735222766a5d9bbc55c686",
+  "official_template_preserved": true,
+  "preamble_exact_original": true,
+  "fixed_intro_and_acknowledgment_preserved": true,
+  "guide_mode": false,
+  "online_compile_errors": 0,
+  "online_compile_warnings": 9,
+  "warning_scope": "ACM keywords/reference-format/CCS expectations and BibTeX optional fields; original competition settings preserved",
+  "pdf_pages": 4,
+  "all_four_pages_visually_inspected": true,
+  "cloud_text_matches_local_after_line_ending_normalization": true,
+  "cloud_figures_exact_match": true,
+  "pdf_sha256": "342665453de3d8fbd694d200b508d8b713822e83e2bb780fe7b956585994d3f0",
+  "report_uploaded_to_github": false,
+  "organizer_form_submitted": false,
+  "record_scope": "Prepared report publication; remote upload/download verification is recorded separately.",
+  "report_publication_authorized": true
+}

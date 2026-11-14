@@ -1,6 +1,6 @@
 PUBLIC RELEASE SCOPE AND THIRD-PARTY STATUS — 2026-11-14
 
-The author authorized publication of code, weights, dependencies, Notebook and reproduction evidence. The technical report and its source/figures are withheld for revision.
+The author authorized publication of code, weights, dependencies, Notebook, reproduction evidence and, subsequently on 2026-11-14, the four-page Overleaf-compiled report and its source/figures.
 
 The pinned biconcavelens community source snapshot has no LICENSE file. A new check of the upstream GitHub repository on 2026-11-14 also found no declared license. Source URLs, commit and attribution are retained. Attribution does not itself establish permission; no blanket license grant is asserted for that material. Its redistribution/license status remains unresolved.
 

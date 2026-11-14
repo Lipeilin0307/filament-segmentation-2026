@@ -11,6 +11,7 @@ This repository reproduces `submission_Base_Full707_HistGBDT_YOLO_Conditional_A_
 - `models/`: all five runtime weights, totaling about 494 MiB, plus SHA256 manifest.
 - `configs/`: frozen source/conditional calibration, official test image hashes and training recipe.
 - `verification/`: reference CSV, numerical evidence, source provenance and environment lock. The reference CSV is **never an inference input**.
+- `report/report.pdf`: four-page technical report compiled in the official Overleaf template; editable LaTeX and figures are included.
 - `licenses/`: upstream attribution and publication review notes.
 
 ## Validated environment
@@ -74,7 +75,7 @@ The five model files total about 494 MiB. Downloading a source ZIP alone may not
 
 ## Attribution and release scope
 
-This release contains inference code, model weights, configuration, dependency pins, a complete Notebook and numerical verification records. **The technical report, its LaTeX source and report figures are intentionally withheld pending author revision.** They are not included in this repository's history.
+This release contains inference code, model weights, configuration, dependency pins, a complete Notebook, numerical verification records, and the [four-page technical report](report/report.pdf) with its LaTeX source and figures. The report was compiled successfully in the official Overleaf template and authorized for publication on 2026-11-14. Publishing these materials does not submit the organizer's final Google form.
 
 The community-derived detector/refiner routines are explicitly attributed in `licenses/THIRD-PARTY-NOTICES.txt` and `verification/source-provenance.json`. No upstream LICENSE was found in that pinned source or the upstream repository when checked on 2026-11-14. This repository does not claim that those portions have an open-source redistribution license, and does not grant a blanket MIT or other license over third-party material. See `licenses/PUBLICATION-REVIEW.txt` for unresolved licensing matters and dependency notices. Public availability is not a statement that all downstream uses are licensed.
 
