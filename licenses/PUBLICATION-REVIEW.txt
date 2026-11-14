@@ -1,0 +1,11 @@
+PUBLIC RELEASE SCOPE AND THIRD-PARTY STATUS — 2026-11-14
+
+The author authorized publication of code, weights, dependencies, Notebook and reproduction evidence. The technical report and its source/figures are withheld for revision.
+
+The pinned biconcavelens community source snapshot has no LICENSE file. A new check of the upstream GitHub repository on 2026-11-14 also found no declared license. Source URLs, commit and attribution are retained. Attribution does not itself establish permission; no blanket license grant is asserted for that material. Its redistribution/license status remains unresolved.
+
+Ultralytics and the other installed libraries retain their own license terms, recorded in dependency-licenses.json. No third-party license is replaced by this repository's notices. This file is a factual status record, not legal clearance.
+
+The numerical reproduction record uses the pinned Windows/CUDA environment. Installation in a completely clean environment and portability to other hardware remain separate from CSV parity. Public Git/LFS download checks are recorded separately when completed.
+
+The organizer's final submission form is not submitted by publishing this repository.

@@ -1,0 +1,26 @@
+{
+  "status": "local_reproduction_passed",
+  "models": 5,
+  "model_bytes": 517573898,
+  "cli_seconds": 314.5926238999964,
+  "notebook_seconds": 672.3013787000091,
+  "peak_pytorch_allocated_gib": 2.1991634368896484,
+  "memory_scope": "PyTorch allocated memory only; excludes CUDA driver, caching and other applications.",
+  "images": 180,
+  "instances": 1261,
+  "base_instances": 1220,
+  "supplement_instances": 41,
+  "submission_sha256": "16a9b935222168d93cb106e7939a763732d259ee165fc2ebd870fda157f48957",
+  "reference_compared_only_after_inference": true,
+  "original_incumbent_modified": false,
+  "published": false,
+  "uploaded": false,
+  "environment_scope": "Existing pinned inference libraries plus isolated notebook tooling. A clean online pip install and anonymous public clone have not been tested.",
+  "publication_pending": [
+    "Third-party community-code redistribution/license status remains unresolved",
+    "Public Git/LFS access validation is recorded separately",
+    "Technical report withheld for revision by the author",
+    "Organizer form not submitted"
+  ],
+  "record_scope": "Historical local verification on 2026-11-13, before public release"
+}

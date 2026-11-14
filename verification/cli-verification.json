@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "full_test_set": true,
+  "images": 180,
+  "instances": 1261,
+  "exact_instance_RLE": true,
+  "nonempty_nonoverlapping": true,
+  "byte_identical_to_reference": true,
+  "submission_sha256": "16a9b935222168d93cb106e7939a763732d259ee165fc2ebd870fda157f48957",
+  "reference_used_only_after_inference": true
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "source": "scripts/strong_baseline_model.py",
+    "sha256": "a48e5f93be0e1865dbb26e369541438441f440a41d520371df26c900db242ce3",
+    "definitions": [
+      "StrongUnet"
+    ]
+  },
+  {
+    "source": "scripts/local_refine.py",
+    "sha256": "a2c63c53292f8294d402d7c33b51b6066cde5f167cdf176fc5c5f0b99a49c1c1",
+    "definitions": [
+      "blocks",
+      "Refiner",
+      "tiles",
+      "input_patch",
+      "attached_mask",
+      "resolve",
+      "refine_image"
+    ]
+  },
+  {
+    "source": "scripts/predict_local_refine_v1.py",
+    "sha256": "3e01e1bc5dc35abdcbbaecdcef3b96251f5ba424afeeb797ac8ab3859e19ded3",
+    "definitions": [
+      "raw_image",
+      "probability"
+    ]
+  },
+  {
+    "source": "scripts/refined_quality_experiment.py",
+    "sha256": "fb112100ec79c21cbf6b51d27374cffd55903323ab1e10c1fa9d7de104c8097d",
+    "definitions": [
+      "core_map"
+    ]
+  },
+  {
+    "source": "scripts/base_adaptation_quality.py",
+    "sha256": "6c90559ae3e18cdf6deee13371d17fef8106959bc1282006f2fb0641227a3eb1",
+    "definitions": [
+      "original_proposals"
+    ]
+  },
+  {
+    "source": "scripts/tiny_complete_candidates.py",
+    "sha256": "04850d7c5b1324b418f179d450ce40444a7dd0f1a8ded8f9c728e03212f7378e",
+    "definitions": [
+      "FEATURES"
+    ]
+  },
+  {
+    "source": "scripts/skeleton_recall.py",
+    "sha256": "b4a35b13f11dafcc287c047277640d7138208b9939dd3b82e4ddaf9fc6f8719a",
+    "definitions": [
+      "tubed_skeleton"
+    ]
+  },
+  {
+    "source": "scripts/tiny_complete_candidates.py",
+    "sha256": "04850d7c5b1324b418f179d450ce40444a7dd0f1a8ded8f9c728e03212f7378e",
+    "definitions": [
+      "patch_features"
+    ]
+  },
+  {
+    "source": "scripts/refined_quality_experiment.py",
+    "sha256": "fb112100ec79c21cbf6b51d27374cffd55903323ab1e10c1fa9d7de104c8097d",
+    "definitions": [
+      "proposal_features"
+    ]
+  },
+  {
+    "source": "scripts/quality_cpu_models.py",
+    "sha256": "acd0149e55e2da1b870a0f6d5a38065557b3bafe8e0212a164435a321d43e90d",
+    "definitions": [
+      "spatial_features"
+    ]
+  },
+  {
+    "source": "scripts/incumbent_histgbdt_v2_common.py",
+    "sha256": "759b51fc786aec31af285328d375fb61ae3a17892b655149196e53f5929780c6",
+    "definitions": [
+      "predict"
+    ]
+  },
+  {
+    "source": "artifacts/bicon040-independent-v1/upstream/filament-segmentation-2026-84c9c7ca05231490e68c6ca31659c42cb8b7a10e/train_refiner.py",
+    "sha256": "944675cdb210c76be57c07b2ce158c5a935adf3a8fca6e6b3a8f45db464fcdc9",
+    "definitions": [
+      "PretrainedRefiner"
+    ]
+  },
+  {
+    "source": "artifacts/bicon040-independent-v1/upstream/filament-segmentation-2026-84c9c7ca05231490e68c6ca31659c42cb8b7a10e/crop_dataset.py",
+    "sha256": "f454f2b6bb0834d2240c8e6fd962673da4d402a5cee278f65b8b14177cf95bc6",
+    "definitions": [
+      "square_bounds"
+    ]
+  },
+  {
+    "source": "artifacts/bicon040-independent-v1/upstream/filament-segmentation-2026-84c9c7ca05231490e68c6ca31659c42cb8b7a10e/predict_refined.py",
+    "sha256": "cd5db3aeba49d5056165e986952668d9fca5a10c6dc3712e771852bb458f552b",
+    "definitions": [
+      "refine_with_tta"
+    ]
+  },
+  {
+    "source": "artifacts/bicon040-independent-v1/upstream/filament-segmentation-2026-84c9c7ca05231490e68c6ca31659c42cb8b7a10e/sweep_ensemble_4way.py",
+    "sha256": "7790c94586aac4e0aee372f9a1fad4e7492d1aa880cbab6cb62ff971cd1e1770",
+    "definitions": [
+      "refine_candidate",
+      "_yolo_style_candidates"
+    ]
+  },
+  {
+    "source": "scripts/bicon040_source_ablation.py",
+    "sha256": "3a68cbc88a59a092902aa844ba2fb7d86c43d55f351245b222e27baf0add2cea",
+    "definitions": [
+      "enc",
+      "select"
+    ]
+  },
+  {
+    "source": "scripts/base_yolo_overlap_audit.py",
+    "sha256": "1f72802e14295ded1f1b5148b70e1d1dc97538e2591093e175881583d698557e",
+    "definitions": [
+      "add_protected"
+    ]
+  }
+]

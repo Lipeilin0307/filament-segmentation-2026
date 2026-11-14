@@ -1,0 +1,10 @@
+{
+  "submission_sha256": "16a9b935222168d93cb106e7939a763732d259ee165fc2ebd870fda157f48957",
+  "images": 180,
+  "instances": 1261,
+  "base_instances": 1220,
+  "supplement_instances": 41,
+  "public_score_displayed": 0.4,
+  "score_source": "User-reported Kaggle public score; exact precision unknown",
+  "private_score": null
+}

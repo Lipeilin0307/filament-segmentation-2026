@@ -1,0 +1,27 @@
+{
+  "base.pt": {
+    "sha256": "dea8c5709e98787e726f592bf7249412c9b0223db1e9b94d7e276f6bd2607591",
+    "bytes": 370793547,
+    "original_source": "artifacts/date-grouped-base-v2/full-707/backbones/deployment/inference.pt"
+  },
+  "refiner.pt": {
+    "sha256": "7ef33bc0bbc17492e9aff178d98844c80a1c27036ed2bf259dd524acd48a2f27",
+    "bytes": 2271349,
+    "original_source": "artifacts/date-grouped-base-v2/full-707/refiners/full/inference.pt"
+  },
+  "histgbdt.pkl": {
+    "sha256": "57d0e91e0861a7f310d2135d4bf4f2b1032242385470c5403455eb1c6b7a4fce",
+    "bytes": 1267662,
+    "original_source": "artifacts/incumbent-full707-histgbdt-v2/histgbdt.pkl"
+  },
+  "yolo11m.pt": {
+    "sha256": "11a0d7ce0e34730a1b94813075edad5844450db3bb65ecf7b807d9c272e6230a",
+    "bytes": 45343785,
+    "original_source": "artifacts/base-yolo-isolated-v2/split-a/reference/models/B1280/weights/best.pt"
+  },
+  "gray_refiner.pt": {
+    "sha256": "8d7c12f1b3aafc43ca36a59cf6051c9724c1e2375dbf3282c785c119031dee5c",
+    "bytes": 97897555,
+    "original_source": "artifacts/base-yolo-isolated-v2/split-a/reference/models/R/inference.pt"
+  }
+}
