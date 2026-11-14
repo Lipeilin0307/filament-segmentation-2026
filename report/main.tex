@@ -30,7 +30,10 @@
 \subtitle{A Solution to the Solar Filament Segmentation Challenge 2026}
 \author{Peilin Li}
 \affiliation{\institution{Nankai University}\city{Tianjin}\country{China}}
-\email{2510547@mail.nankai.edu.cn}
+\email{lipeilin307@gmail.com}
+\author{Jinhao Liu}
+\affiliation{\institution{Nankai University}\city{Tianjin}\country{China}}
+\renewcommand{\shortauthors}{Peilin Li and Jinhao Liu}
 \begin{abstract}
 This report describes our solution to the Solar Filament Segmentation Challenge~2026, a Kaggle competition on automatic segmentation of solar filaments in GONG H-$\alpha$ observations.
 Our submitted system combines a native-resolution ConvNeXt-Base U-Net, residual instance refinement, and two histogram gradient-boosted quality regressors. A separately trained YOLO11m detector and grayscale crop refiner propose additional instances. Calibrated, overlap-protected merging preserves all accepted Base masks. The selected submission contains 1,261 instances across 180 test images and has a reported public leaderboard display of 0.40; the unrounded and private scores are unavailable. Recipe-matched historical A/B holdouts give PQ 0.45241 and 0.45183, respectively, but are not evaluations of the deployed 707-image weights. We document the fixed inference order, training-side quality supervision, and exact CSV reproduction checks. The contribution is a reproducible system integration rather than a new backbone architecture.

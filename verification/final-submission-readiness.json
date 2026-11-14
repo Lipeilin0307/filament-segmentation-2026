@@ -1,13 +1,17 @@
 {
-  "checked_at": "2026-11-14T12:28:41.874236+08:00",
+  "checked_at": "2026-11-14T12:51:32.270712+08:00",
   "repository_url": "https://github.com/Lipeilin0307/filament-segmentation-2026",
-  "tested_report_commit": "6d8b0be5f548fc7d198925fb5c33dd0e503b7986",
   "report": {
     "pages": 4,
     "official_template": true,
-    "pdf_sha256": "342665453de3d8fbd694d200b508d8b713822e83e2bb780fe7b956585994d3f0",
+    "pdf_sha256": "49e992fd9c6fc2099d4c443b38e15a74d710af326777447a346e7874640c7f07",
     "source_and_figures_published": true,
-    "anonymous_download_hash_match": true
+    "authors": [
+      "Peilin Li",
+      "Jinhao Liu"
+    ],
+    "contact_email": "lipeilin307@gmail.com",
+    "local_and_cloud_source_match": true
   },
   "inference_reproduction": {
     "full_cli_and_executed_notebook_passed": true,
@@ -19,7 +23,7 @@
   },
   "remaining": {
     "community_source_redistribution_license": "unresolved; attribution and exact pinned source are recorded",
-    "organizer_form": "not filled or submitted; specific-field inspection incomplete because browser approval blocked access",
+    "organizer_form": "All seven required fields inspected successfully; not filled or submitted. Team and country entries confirmed; at least one member email is available.",
     "kaggle_final_selection": "not inspected or changed; package reproduces the retained public-0.40 CSV only"
   },
   "official_clarifications": {
@@ -45,7 +49,7 @@
       "repository_remain_public_through_at_least": "2026-11-30"
     }
   },
-  "scope": "Optional training entry added without actual training. Clean environment full inference verified. No form or final-selection changes; original incumbent and report remain unchanged.",
+  "scope": "Two-author affiliation/contact update only. Report recompiled in Overleaf and all four pages inspected. Inference code, five model files, Notebook and reference CSV remain unchanged; no retraining or form submission.",
   "optional_training": {
     "packaged": true,
     "notebook_defaults_disabled": true,
@@ -62,5 +66,35 @@
     "include_system_site_packages": false,
     "full_notebook_byte_identity": true,
     "verification": "clean-environment-verification.json"
-  }
+  },
+  "previous_tested_report_commit": "6d8b0be5f548fc7d198925fb5c33dd0e503b7986",
+  "team": {
+    "members": [
+      {
+        "name": "Peilin Li",
+        "country": "China",
+        "affiliation": "Nankai University",
+        "email": "lipeilin307@gmail.com"
+      },
+      {
+        "name": "Jinhao Liu",
+        "country": "China",
+        "affiliation": "Nankai University",
+        "email": null
+      }
+    ],
+    "form_names_value": "Peilin Li; Jinhao Liu",
+    "form_countries_value": "China; China",
+    "form_contact_email": "lipeilin307@gmail.com"
+  },
+  "form_required_fields": [
+    "Email address",
+    "Full Names of All Team Members",
+    "Email Addresses of All Team Members",
+    "Countries of All Team Members",
+    "GIT URL",
+    "Submission File",
+    "Technical Report"
+  ],
+  "form_optional_affiliations": "Nankai University; Nankai University"
 }

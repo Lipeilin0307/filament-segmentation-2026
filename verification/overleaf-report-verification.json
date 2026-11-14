@@ -12,12 +12,23 @@
   "all_four_pages_visually_inspected": true,
   "cloud_text_matches_local_after_line_ending_normalization": true,
   "cloud_figures_exact_match": true,
-  "pdf_sha256": "342665453de3d8fbd694d200b508d8b713822e83e2bb780fe7b956585994d3f0",
-  "report_uploaded_to_github": true,
+  "pdf_sha256": "49e992fd9c6fc2099d4c443b38e15a74d710af326777447a346e7874640c7f07",
   "organizer_form_submitted": false,
-  "record_scope": "Overleaf compilation and authorized GitHub publication, including anonymous report download verification.",
+  "record_scope": "Overleaf compilation and local verification of the authorized two-author/contact update; publication receipt is recorded separately after the commit.",
   "report_publication_authorized": true,
-  "published_commit": "6d8b0be5f548fc7d198925fb5c33dd0e503b7986",
-  "anonymous_download_sha256_matches": true,
-  "publication_verified_at": "2026-11-14T12:08:38.999584+08:00"
+  "previous_publication": {
+    "published_commit": "6d8b0be5f548fc7d198925fb5c33dd0e503b7986",
+    "anonymous_download_sha256_matches": true,
+    "publication_verified_at": "2026-11-14T12:08:38.999584+08:00",
+    "pdf_sha256": "342665453de3d8fbd694d200b508d8b713822e83e2bb780fe7b956585994d3f0"
+  },
+  "authors": [
+    "Peilin Li",
+    "Jinhao Liu"
+  ],
+  "affiliation": "Nankai University, Tianjin, China",
+  "contact_email": "lipeilin307@gmail.com",
+  "second_author_email": null,
+  "verified_at": "2026-11-14T12:51:32.270712+08:00",
+  "content_change": "Author metadata only; report scientific content, template, figures and bibliography unchanged."
 }
