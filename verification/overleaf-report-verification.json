@@ -13,8 +13,11 @@
   "cloud_text_matches_local_after_line_ending_normalization": true,
   "cloud_figures_exact_match": true,
   "pdf_sha256": "342665453de3d8fbd694d200b508d8b713822e83e2bb780fe7b956585994d3f0",
-  "report_uploaded_to_github": false,
+  "report_uploaded_to_github": true,
   "organizer_form_submitted": false,
-  "record_scope": "Prepared report publication; remote upload/download verification is recorded separately.",
-  "report_publication_authorized": true
+  "record_scope": "Overleaf compilation and authorized GitHub publication, including anonymous report download verification.",
+  "report_publication_authorized": true,
+  "published_commit": "6d8b0be5f548fc7d198925fb5c33dd0e503b7986",
+  "anonymous_download_sha256_matches": true,
+  "publication_verified_at": "2026-11-14T12:08:38.999584+08:00"
 }
