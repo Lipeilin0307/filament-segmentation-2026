@@ -50,7 +50,7 @@ The verifier checks exact per-image instance order/RLE, decode/re-encode, nonemp
 
 Both the standalone CLI and `reproduce.executed.ipynb` regenerated all 180 images from scratch and produced the exact target CSV bytes. CLI inference took **314.6 s**; Notebook inference took **672.3 s** in this local session. Both recorded **2.20 GiB peak PyTorch allocated memory**, which excludes driver allocations, caching and other applications. Runtime is environment-dependent.
 
-The executed Notebook retains all five executed code cells, their outputs, and a prediction visualization. Reproduction records are stored under `verification/`. Run `python verify_local_package.py` for a CPU-only package integrity check. Validation used the existing pinned inference libraries plus isolated Notebook tooling; a clean internet-based environment installation and an anonymous public clone are not yet tested.
+The executed Notebook retains all five executed code cells, their outputs, and a prediction visualization. Reproduction records are stored under `verification/`. Run `python verify_local_package.py` for a CPU-only package integrity check. Validation used the existing pinned inference libraries plus isolated Notebook tooling; a clean internet-based dependency installation is not yet tested. A separate anonymous clone and complete Git LFS download passed on 2026-11-14, with all five model hashes and the exact reference CSV verified; see `verification/public-download-verification.json`.
 
 ## Model and evaluation scope
 

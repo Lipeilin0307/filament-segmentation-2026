@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-11-14T11:51:07.599540+08:00",
+  "repository_url": "https://github.com/Lipeilin0307/filament-segmentation-2026",
+  "visibility": "public",
+  "tested_commit": "68949e07b88be51f5a9cfc88afd1faea9b3b326a",
+  "anonymous_clone_and_lfs_download": "passed",
+  "credential_helpers_disabled_for_download": true,
+  "system_and_global_git_config_disabled_for_download": true,
+  "models": 5,
+  "model_bytes": 517573898,
+  "all_model_sha256_match": true,
+  "git_lfs_fsck": "passed",
+  "reference_csv_sha256": "16a9b935222168d93cb106e7939a763732d259ee165fc2ebd870fda157f48957",
+  "original_model_and_submission_files_unchanged": true,
+  "technical_report_excluded_from_entire_published_history": true,
+  "history_commits_checked": 2,
+  "full_inference_scope": "CLI and Notebook full 180-image parity verified locally on 2026-11-13; public download files match their hashes.",
+  "clean_dependency_install_tested": false,
+  "organizer_form_submitted": false,
+  "community_source_license_status": "No declared upstream license found; status unresolved and attribution retained."
+}
