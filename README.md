@@ -1,6 +1,6 @@
 # Solar Filament Segmentation — retained public-0.40 system
 
-Peilin Li and Jinhao Liu, Nankai University, China. Contacts: lipeilin307@gmail.com (Peilin Li); 1916742086@qq.com (Jinhao Liu).
+Peilin Li and Jinhao Liu, Nankai University, China. Contacts: lipeilin307@gmail.com (Peilin Li); liuj99257@gmail.com (Jinhao Liu).
 
 This repository reproduces `submission_Base_Full707_HistGBDT_YOLO_Conditional_A_20261028.csv` from input images. It packages the selected system, not the project's historical experiments. The public score **displayed as 0.40** was reported by the participant; its unrounded value and private score are unknown.
 
